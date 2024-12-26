@@ -33,14 +33,12 @@ const FEATURED_MEALS = [
 
 const Home = () => {
   const { t } = useLanguage();
-  const containerRef = useRef(null);
   const parallaxRef = useRef(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: parallaxRef,
-    offset: ["start start", "end start"],
-    container: containerRef
+    offset: ["start start", "end start"]
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -91,7 +89,7 @@ const Home = () => {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen relative">
+    <div className="min-h-screen relative">
       {/* Hero Section */}
       <section ref={parallaxRef} className="relative h-[80vh] flex items-center justify-center text-white overflow-hidden">
         <motion.div 
