@@ -12,5 +12,14 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, './app')
     }
-  }
+  },
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
+  },
+  base: '/'
 }) 

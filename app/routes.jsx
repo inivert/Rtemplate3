@@ -33,9 +33,14 @@ const router = createBrowserRouter([
         element: <Contact />,
         errorElement: <ErrorBoundary />,
       },
+      {
+        path: '*',
+        element: <ErrorBoundary />,
+      }
     ],
   },
 ], {
+  basename: '/',
   future: {
     v7_startTransition: true,
     v7_relativeSplatPath: true,
