@@ -19,21 +19,30 @@ This template is built with React and incorporates essential modern web developm
 ## Project Structure
 
 ```
-src/
+app/
 ├── components/     # Reusable UI components
-├── pages/         # Main application pages
-├── styles/        # Global styles and themes
-├── utils/         # Helper functions and utilities
-└── types/         # TypeScript type definitions
+├── routes/        # Route components and logic
+├── welcome/       # Welcome page components
+├── context/       # React context providers
+├── root.jsx      # Root component
+├── routes.jsx    # Route definitions
+├── main.jsx      # Application entry point
+└── app.css       # Global styles
+
+public/           # Static assets
 ```
 
 ## Technical Stack
 
 - **Frontend Framework**: React
-- **Language**: TypeScript
+- **Language**: JavaScript/TypeScript
 - **Styling**: TailwindCSS
 - **Development Server**: Vite
-- **Package Manager**: npm/pnpm
+- **Package Manager**: npm
+- **Build Tools**: 
+  - PostCSS
+  - Vite
+  - TailwindCSS
 
 ## Getting Started
 
@@ -55,10 +64,11 @@ npm run build
 ## Development Guidelines
 
 - Keep components small and focused
-- Follow TypeScript best practices
-- Use consistent naming conventions
+- Organize routes in the `app/routes` directory
+- Use components directory for reusable UI elements
+- Follow consistent naming conventions
 - Write clean, maintainable code
-- Follow the established project structure
+- Utilize TailwindCSS for styling
 
 ---
 
